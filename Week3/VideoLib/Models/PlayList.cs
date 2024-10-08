@@ -7,7 +7,7 @@ public class PlayList : IEnumerable<Video>
     private readonly List<Video> _list = [];
 
     public void Add(Video item) => _list.Add(item);
-    public bool Remove(Video item) => _list.Remove(item);
+    public int RemoveById(int id) => _list.RemoveAll(x => x.Id == id);
 
     public IEnumerator<Video> GetEnumerator() => _list.GetEnumerator();
 
