@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoApi", "VideoApi\VideoApi.csproj", "{9159EBF4-8E8E-48DC-ADA4-F0D99FD18531}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoLib", "VideoLib\VideoLib.csproj", "{922E6F5C-7A38-4394-945D-E07AA0C4C2D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{9159EBF4-8E8E-48DC-ADA4-F0D99FD18531}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9159EBF4-8E8E-48DC-ADA4-F0D99FD18531}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9159EBF4-8E8E-48DC-ADA4-F0D99FD18531}.Release|Any CPU.Build.0 = Release|Any CPU
+		{922E6F5C-7A38-4394-945D-E07AA0C4C2D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{922E6F5C-7A38-4394-945D-E07AA0C4C2D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{922E6F5C-7A38-4394-945D-E07AA0C4C2D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{922E6F5C-7A38-4394-945D-E07AA0C4C2D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
