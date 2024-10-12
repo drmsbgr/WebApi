@@ -6,7 +6,7 @@ public class Video(int id, string? title, double duration)
     public string? Title { get; set; } = title;
     public double Duration { get; set; } = duration;
 
-    public static PlayList Videos =
+    public readonly static PlayList Videos =
     [
         new(1, "Heavy Blanket", 3.52),
         new(2, "The Summoning", 4.20),
