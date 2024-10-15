@@ -27,18 +27,17 @@ public class Movie
         ];
     public static List<Movie> Movies => _movies;
 
-    public static void EditMovie(Movie edited)
+    public static IResult EditMovie(Movie edited)
     {
         var found = Movies.Find(x => x.Id.Equals(edited.Id));
         if (found is not null)
         {
             found.Title = edited.Title;
             found.Duration = edited.Duration;
+            return Results.Ok(found);
         }
         else
-        {
-            //bulunamadı
-        }
+            return Results.NotFound();
     }
 
     public static void RemoveMovieById(int id) => Movies.RemoveAll(x => x.Id.Equals(id));

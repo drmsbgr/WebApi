@@ -33,6 +33,12 @@ app.MapPost("api/movies", (string title, decimal duration) =>
     return Results.Created($"/api/movies/{mov.Id}", mov);
 });
 
+app.MapGet("api/movies/search", (string? title) =>
+{
+    var movies = string.IsNullOrEmpty(title) ? Movie.Movies : Movie.Movies.Where(m => m.Title != null && m.Title.Contains(title, StringComparison.OrdinalIgnoreCase)).ToList();
+    return movies.Count != 0 ? Results.Ok(movies) : Results.NoContent();
+});
+
 app.MapPut("api/movies", (Movie edited) => Movie.EditMovie(edited));
 
 app.MapDelete("api/movies", (int id) => Movie.RemoveMovieById(id));
