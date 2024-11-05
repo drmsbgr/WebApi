@@ -28,9 +28,9 @@ app.MapGet("api/movies/{id:int}", (int id) =>
 
 app.MapPost("api/movies", (string title, decimal duration) =>
 {
-    var mov = new Movie(title, duration);
-    Movie.AddMovie(mov);
-    return Results.Created($"/api/movies/{mov.Id}", mov);
+    var movie = new Movie(title, duration);
+    Movie.AddMovie(movie);
+    return Results.Created($"/api/movies/{movie.Id}", movie);
 });
 
 app.MapGet("api/movies/search", (string? title) =>
